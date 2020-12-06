@@ -110,7 +110,7 @@ public class SettingsWindow implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(confirm)) {
             CollageSettings settings = new CollageSettings(toInt(cols.getText()), toInt(rows.getText()),
-                    autoColRow.isSelected(), toDouble(resolution.getText()));
+                    autoColRow.isSelected(), toDouble(resolution.getText()), new Format());
             w.dispose();
             collageHandler.setSettings(settings);
         }

@@ -3,11 +3,12 @@ public class CollageSettings {
 
     private int cols;
     private int rows;
+    private Format format;
     private boolean autoComplete;
 
     private double resolution;
 
-    public CollageSettings(int cols, int rows, boolean autoComplete, double resolution) {
+    public CollageSettings(int cols, int rows, boolean autoComplete, double resolution, Format format) {
         this.cols = cols;
         this.rows = rows;
         this.resolution = resolution;
@@ -20,6 +21,7 @@ public class CollageSettings {
         this.rows = 1;
         this.resolution = 1.0;
         this.autoComplete = true;
+        this.format = new Format();
     }
 
     public int getCols() {

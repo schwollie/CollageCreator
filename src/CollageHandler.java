@@ -34,6 +34,10 @@ public class CollageHandler {
         this.settings = c;
     }
 
+    public CollageSettings getSettings() {
+        return settings;
+    }
+
     public BufferedImage getResult() {
         return result;
     }

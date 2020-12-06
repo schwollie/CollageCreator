@@ -1,4 +1,3 @@
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -6,16 +5,17 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
 
 public class ControlWindow implements ActionListener {
 
     private final Window w;
+    private final int sizeX = 1500;
+    private final int sizeY = 1000;
     private CollageHandler collageHandler;
     private JMenuItem openImages, exportImage, createImage, settingsMenu;
 
     public ControlWindow(CollageHandler c) {
-        w = new Window(1500, 1000);
+        w = new Window(sizeX, sizeY);
         this.collageHandler = c;
 
         createUI();
@@ -85,6 +85,10 @@ public class ControlWindow implements ActionListener {
         w.add(pane);
         w.setVisible(true);
 
+    }
+
+    private void showImportedImages(File[] files) {
+        
     }
 
     @Override
